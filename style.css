@@ -1,0 +1,129 @@
+@keyframes neon-2 {
+	from {
+		box-shadow: 0 0 5px /*#19d7d7*/ #000000,
+		0 0 10px #000000,
+		0 0 15px #000000,
+		0 0 20px #000000;
+	}
+	to {
+		box-shadow: 0 0 20px #000000,
+		0 0 35px #000000,
+		0 0 40px #000000,
+		0 0 50px #000000,
+		0 0 800px #000000;
+	}
+}
+@font-face {
+	font-family: 'Cinzel'; 
+	src: url(Fonts/Cinzel/cinzel_regular.ttf); 
+}
+@font-face {
+	font-family: 'Bleeding'; 
+	src: url(Fonts/Cinzel/cinzel_regular.ttf); 
+}
+@font-face {
+	font-family: 'Hamil'; 
+	src: url(Fonts/Mr_Hamiltoneg/20094.ttf); 
+}
+@font-face {
+	font-family: 'Honey'; 
+	src: url(Fonts/Honey/20190.otf); 
+}
+@font-face {
+	font-family: 'Coventry'; 
+	src: url(Fonts/Covenrty/18214.otf); 
+}
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/back.jpg);
+    /*min-height: 100%;*/
+    background-size:cover;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+}
+h1 {
+    color: #ffe449;
+    font-size: 60px;
+    font-family: 'Cinzel', serif;
+    margin-top: 100px;
+}
+.elder_sign {
+    height: 100%;
+    display:block;
+    margin:auto;
+    /*border: 5px solid;*/
+    border-radius: 35px;
+    /*border-color: #596c50;*/
+    margin-top: -100px;
+    animation: 2s neon-2 alternate-reverse infinite;
+}
+.container p {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Bleeding', serif;
+    color: #05b07c;
+    transition-property: color;
+    transition-duration: 0.20s;
+    transition-timing-function: linear;
+}
+.container p:hover {
+    color: #02ef97;
+    cursor: pointer;
+}
+.slider{
+    max-width: 80%;
+    /*max-height: 0%;*/
+    display: grid;
+    height: 100vh;
+    align-content: center;
+    margin: auto;
+}
+.slider .item {
+    animation-name: fade;
+    animation-duration: 4s;
+}
+.quote {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 600px auto;
+    align-items: center;
+} 
+.quote img {
+    width: 100%;
+    filter: brightness(70%);
+}
+.quote div p {
+    font-size: 45px;
+    color: #02ef97;
+    font-family: 'Coventry', serif;   
+}
+.quote div .name {
+    float: right;
+    margin-top: 40px;
+}
+footer p {
+    z-index: 999;
+    font-size: 18px;
+    margin-top: -60px;
+    color: #ffe449;
+    cursor: help;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
